@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Innovate Stadia Systems Poland | Technologia SPS & Architektura Stadionowa</title>
+    <title>Innovate Stadia Systems Poland | SPS Technology & Architektura Stadionowa</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -19,13 +19,9 @@
                       "surface": "#f8f9ff",
                       "on-surface": "#0b1c30",
                       "on-surface-variant": "#43474f",
-                      "outline-variant": "#c4c6d0"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
+                      "outline-variant": "#c4c6d0",
+                      "primary-fixed": "#d6e3ff",
+                      "secondary-container": "#4ae4fd"
               },
               "fontFamily": {
                       "headline": ["Space Grotesk"],
@@ -41,76 +37,82 @@
         html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-cyan-100">
+<body class="bg-surface text-on-surface font-body">
 
-<nav class="bg-white/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm flex justify-between items-center px-6 md:px-12 py-4">
+<nav class="bg-slate-50/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm flex justify-between items-center px-8 py-4">
     <div class="flex items-center gap-4">
-        <img alt="Logo Innovate Stadia" class="h-10 w-auto" src="logo.png"/> 
-        <span class="text-lg md:text-xl font-bold uppercase tracking-tighter text-primary">Innovate Stadia Systems Poland</span>
+        <img alt="Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uiJimW2ASQ30rXQorx8m3BxgJtxHkJaPPK4v3be-ufI3jqFK81KWo2EbcfVUi9aBtbw8Vhw8SMBqgElawV0nWfjS6KmD3erXJ1Nrn1rlZ0xLP12MZmgiK9tUe17BX2DFk3VFz9xxHTKSzL78JA5jinTWAV-D5U7b63o_p3NHR9LUILooN8yKY4mO21cJ0mo7Re2K11QaDGh2K3l1SgbX4H1TQizqMp3hUF6tcK6HI3EzT0VCfeI-K_3AVkbo33G8cl5L-zyUVSmPA"/>
+        <span class="text-xl font-bold uppercase tracking-tighter text-blue-950">Innovate Stadia Systems Poland</span>
     </div>
-    <div class="hidden lg:flex items-center space-x-8 font-headline font-medium">
-        <a class="hover:text-secondary transition-colors" href="#technologia">Technologia SPS</a>
-        <a class="hover:text-secondary transition-colors" href="#o-nas">O nas</a>
-        <a class="hover:text-secondary transition-colors" href="#kontakt">Kontakt</a>
+    <div class="hidden md:flex items-center space-x-8 font-headline">
+        <a class="text-slate-600 hover:text-blue-900 transition-colors" href="#technologia">SPS Technology</a>
+        <a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1" href="#o-nas">O nas</a>
+        <a class="text-slate-600 hover:text-blue-900 transition-colors" href="#kontakt">Kontakt</a>
     </div>
 </nav>
 
-<header class="relative min-h-screen flex items-center pt-20 hero-gradient overflow-hidden text-white">
+<header class="relative min-h-screen flex items-center pt-20 hero-gradient overflow-hidden">
     <div class="container mx-auto px-8 grid md:grid-cols-12 gap-12 items-center relative z-10">
         <div class="md:col-span-7">
-            <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full mb-8">
+            <div class="inline-flex items-center gap-2 bg-secondary-container/20 px-4 py-1.5 rounded-full mb-8">
+                <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_#006876]"></span>
                 <span class="text-secondary-fixed-dim text-xs font-bold uppercase tracking-widest font-headline">Opatentowana Technologia SPS</span>
             </div>
-            <h1 class="font-headline text-5xl md:text-7xl font-bold leading-tight mb-8">
+            <h1 class="text-white font-headline text-5xl md:text-7xl font-bold leading-tight mb-8">
                 Lżejsze. Silniejsze. <span class="text-secondary-fixed-dim">Trwalsze</span> Stadiony.
             </h1>
-            <p class="text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl opacity-90">
-                Wdrażamy technologię Sandwich Plate System (SPS) – rewolucyjny kompozyt strukturalny, który redefiniuje wytrzymałość nowoczesnych aren sportowych w Polsce.
+            <p class="text-primary-fixed text-lg md:text-xl font-light mb-10 max-w-2xl">
+                Wdrażamy technologię Sandwich Plate System (SPS) – rewolucyjny kompozyt strukturalny, który redefiniuje wytrzymałość nowoczesnych aren sportowych.
             </p>
             <div class="flex flex-wrap gap-6">
-                <a href="#kontakt" class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-secondary-fixed-dim transition-all">Rozpocznij Projekt</a>
-                <a href="#technologia" class="border border-white/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">Dowiedz się więcej</a>
+                <a href="#kontakt" class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all">Skontaktuj się</a>
+                <a href="#technologia" class="border border-outline-variant/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">Systemy SPS</a>
             </div>
         </div>
-        <div class="md:col-span-5 relative">
-            <div class="aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img class="w-full h-full object-cover" src="stadium-hero.jpg" alt="Nowoczesny Stadion"/>
+        <div class="md:col-span-5">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB2e-0TsAWuE6uJpyUaZbt-lb8JNUDq4E23P1kE64H29VDqd-SgMaprJ_Qx9krKKRoiwsPFDW7kOPgL6DgWahJL4LjhpptVMHGGxUlsi-KHaCwcy2WOz0M-roTJzatYOGf98NBgIao1p5WKxsr1g-4qVs4OHkMeUU-bzkxuhwow8JBWLGB5JK-omI3xqCsmqB224oR7uGXB1MDrCbJ2sFb1pmRoLF6A5WIuGfkiT4DzZSG2DdH2qJg2tVnLQcgUZl9asYPrYDwzKU" alt="Stadion"/>
             </div>
         </div>
     </div>
 </header>
 
-<section class="py-32 bg-white" id="technologia">
+<section class="py-32 bg-surface" id="technologia">
     <div class="container mx-auto px-8">
-        <div class="max-w-3xl mb-20">
-            <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">Przewaga Sandwich Plate System</h2>
-            <p class="text-on-surface-variant text-lg leading-relaxed">SPS to zaawansowany kompozyt zastępujący tradycyjny beton, oferujący bezprecedensowe korzyści konstrukcyjne i operacyjne dla inwestorów oraz architektów.</p>
+        <div class="mb-20">
+            <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">Przewaga Technologii Sandwich Plate System</h2>
+            <p class="text-on-surface-variant text-lg">SPS to zaawansowany kompozyt zastępujący beton, oferujący bezprecedensowe korzyści konstrukcyjne.</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="md:col-span-2 bg-slate-50 rounded-3xl p-10 group hover:bg-slate-100 transition-colors">
-                <span class="material-symbols-outlined text-5xl text-secondary mb-6">weight</span>
+                <span class="material-symbols-outlined text-4xl text-secondary mb-6">weight</span>
                 <h3 class="text-3xl font-headline font-bold text-primary mb-4">Redukcja Masy o 70-80%</h3>
-                <p class="text-on-surface-variant text-lg">SPS drastycznie zmniejsza obciążenie konstrukcji, umożliwiając lżejsze fundamenty i znacznie szybszy proces montażu elementów prefabrykowanych.</p>
+                <p class="text-on-surface-variant text-lg">SPS zmniejsza obciążenie martwe konstrukcji, umożliwiając lżejsze fundamenty i szybszy montaż.</p>
             </div>
-            <div class="bg-primary text-white rounded-3xl p-10">
-                <span class="material-symbols-outlined text-5xl text-secondary-fixed-dim mb-6">vibration</span>
-                <h3 class="text-2xl font-headline font-bold mb-4">Tłumienie Drgań</h3>
-                <p class="opacity-80">Rdzeń elastomerowy zapewnia doskonałe tłumienie wibracji wywołanych przez dynamiczny ruch tłumu, co przekłada się na bezpieczeństwo i komfort widzów.</p>
-            </div>
-            <div class="bg-slate-50 rounded-3xl p-10 border border-slate-200">
-                <span class="material-symbols-outlined text-5xl text-secondary mb-6">eco</span>
-                <h3 class="text-2xl font-headline font-bold text-primary mb-4">Zrównoważony Rozwój</h3>
-                <p class="text-on-surface-variant">Technologia przyjazna środowisku – redukujemy ślad węglowy inwestycji i przedłużamy żywotność obiektów bez konieczności ich wyburzania.</p>
-            </div>
-            <div class="md:col-span-2 bg-slate-50 rounded-3xl p-10 flex flex-col md:flex-row gap-8 items-center">
-                <div class="flex-1">
-                    <h3 class="text-2xl font-headline font-bold text-primary mb-4">Lokalne wsparcie projektowe</h3>
-                    <p class="text-on-surface-variant mb-6">Jako autoryzowany partner w Polsce, dostarczamy pełne wsparcie techniczne dostosowane do polskich norm budowlanych.</p>
-                    <a href="https://spstechnology.com" class="text-primary font-bold inline-flex items-center gap-2 hover:underline">Globalne portfolio SPS <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+            
+            <div class="bg-primary text-white rounded-3xl p-10 flex flex-col justify-between">
+                <div>
+                    <span class="material-symbols-outlined text-4xl text-secondary-fixed-dim mb-6">vibration</span>
+                    <h3 class="text-2xl font-headline font-bold mb-4">Tłumienie Drgań</h3>
+                    <p class="opacity-80">Rdzeń elastomerowy zapewnia doskonałe tłumienie wibracji wywołanych dynamicznym ruchem tłumu.</p>
                 </div>
-                <div class="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl overflow-hidden">
-                    <img src="tech-view.jpg" class="w-full h-full object-cover" alt="Technologia SPS"/>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-3xl p-10 shadow-sm">
+                <span class="material-symbols-outlined text-4xl text-secondary mb-6">eco</span>
+                <h3 class="text-2xl font-headline font-bold text-primary mb-4">Life-Extension</h3>
+                <p class="text-on-surface-variant">Zrównoważone rozwiązanie dla modernizacji – przedłużamy żywotność obiektów bez konieczności wyburzania.</p>
+            </div>
+
+            <div class="md:col-span-2 bg-slate-50 rounded-3xl p-10 flex flex-col md:flex-row gap-10 items-center">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-headline font-bold text-primary mb-4">Wsparcie Techniczne</h3>
+                    <p class="text-on-surface-variant mb-6">Dostarczamy pełne wsparcie projektowe dla systemów SPS w Polsce, łącząc globalną innowację z lokalnym rynkiem.</p>
+                    <a class="inline-flex items-center text-primary font-bold hover:underline" href="https://spstechnology.com">Poznaj portfolio SPS <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span></a>
+                </div>
+                <div class="w-full md:w-1/3 aspect-video rounded-2xl overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDawPTD2wx-F8w0pcj-MModDKuT4ONeRwD0EhvHbGl3eWCENyeS3BYoweSO8zv0AYvkYOAwHQD_2cT_ePl_DnnUG2JZzwDAk0RF86fswoxb4yi75Z-6C7e7kLGEVH9-LynPzz24AMwhUVbg3rAW70igIF2EOYmPZJhVblTALsmuF7X2bpddhMtbwIKMYknQ1HFJmoFt5h-diyDt3sGcpubMVakxpwhsFBKiZcw7Sp7kRQzOR3GYV5DVD5cwI-dh-sBiKdLplo1AKHo" alt="Biuro projektowe"/>
                 </div>
             </div>
         </div>
@@ -118,59 +120,54 @@
 </section>
 
 <section class="py-32 bg-slate-50" id="o-nas">
-    <div class="container mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
-        <div class="order-2 md:order-1">
-            <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-8">Eksperci od Konstrukcji</h2>
-            <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">
-                Innovate Stadia Systems Poland to zespół specjalistów skoncentrowanych na wdrażaniu nowoczesnych technologii w infrastrukturze sportowej. Łączymy światowe innowacje z lokalnym doświadczeniem inżynieryjnym.
-            </p>
-            <div class="space-y-4">
-                <div class="flex gap-4">
-                    <span class="material-symbols-outlined text-secondary">check_circle</span>
-                    <p class="font-medium text-primary text-lg">Optymalizacja struktur stadionowych</p>
+    <div class="container mx-auto px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-headline font-bold text-primary mb-12">O Nas</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="border-l-4 border-secondary pl-8">
+                    <h4 class="text-xl font-bold text-primary mb-4">Eksperci od Konstrukcji Kompozytowych</h4>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Specjalizujemy się w inżynierii stadionowej wykorzystującej Sandwich Plate System. Nasi dyrektorzy posiadają wieloletnie doświadczenie w optymalizacji struktur sportowych w Polsce i na świecie.
+                    </p>
                 </div>
-                <div class="flex gap-4">
-                    <span class="material-symbols-outlined text-secondary">check_circle</span>
-                    <p class="font-medium text-primary text-lg">Dostosowanie do polskich norm prawnych</p>
+                <div class="border-l-4 border-primary pl-8">
+                    <h4 class="text-xl font-bold text-primary mb-4">Lokalne Wdrożenia SPS</h4>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Jako polski oddział Innovate Stadia Systems, dostarczamy technologie SPS dostosowane do polskich norm budowlanych i wymogów środowiskowych, dbając o najwyższy standard realizacji.
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="order-1 md:order-2">
-            <div class="rounded-3xl overflow-hidden shadow-xl border-8 border-white">
-                <img src="stadium-architecture.jpg" class="w-full h-full object-cover" alt="Architektura Stadionowa"/>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-24 bg-primary text-white" id="kontakt">
-    <div class="container mx-auto px-8 text-center">
-        <h2 class="text-4xl md:text-5xl font-headline font-bold mb-8">Rozpocznijmy współpracę</h2>
-        <p class="text-xl mb-12 opacity-80 max-w-2xl mx-auto">Chcesz poznać możliwości zastosowania Sandwich Plate System w swoim projekcie? Skontaktuj się z naszymi ekspertami.</p>
-        
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white/5 p-8 rounded-2xl flex flex-col items-center">
-                <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4">mail</span>
-                <p class="text-xl font-medium">info@innovatestadia-systems-pl.com</p>
+<section class="py-24 bg-primary text-white text-center" id="kontakt">
+    <div class="container mx-auto px-8">
+        <h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">Zmodernizuj Swój Obiekt</h2>
+        <p class="text-primary-fixed text-lg mb-12 max-w-xl mx-auto">Nasi inżynierowie przygotują analizę oszczędności i trwałości Twojej inwestycji.</p>
+        <div class="flex flex-wrap justify-center gap-12">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary-fixed-dim text-3xl">mail</span>
+                <span class="text-lg font-medium">info@innovatestadia-systems-pl.com</span>
             </div>
-            <div class="bg-white/5 p-8 rounded-2xl flex flex-col items-center">
-                <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4">location_on</span>
-                <p class="text-xl font-medium">Warszawa, Al. Jana Pawła II 27</p>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary-fixed-dim text-3xl">location_on</span>
+                <span class="text-lg font-medium">Aleja Jana Pawła II 27, Warszawa</span>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="bg-slate-950 text-slate-400 py-16 px-12">
+<footer class="bg-blue-950 text-slate-400 py-12 px-8">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-8 md:mb-0 text-center md:text-left">
-            <span class="text-white text-2xl font-bold font-headline block mb-2">Innovate Stadia Systems Poland</span>
-            <p>© 2024 Wszystkie prawa zastrzeżone. Partner Technologiczny SPS.</p>
+        <div class="mb-8 md:mb-0">
+            <img alt="Logo" class="h-12 mb-4" src="https://lh3.googleusercontent.com/aida/ADBb0uiJimW2ASQ30rXQorx8m3BxgJtxHkJaPPK4v3be-ufI3jqFK81KWo2EbcfVUi9aBtbw8Vhw8SMBqgElawV0nWfjS6KmD3erXJ1Nrn1rlZ0xLP12MZmgiK9tUe17BX2DFk3VFz9xxHTKSzL78JA5jinTWAV-D5U7b63o_p3NHR9LUILooN8yKY4mO21cJ0mo7Re2K11QaDGh2K3l1SgbX4H1TQizqMp3hUF6tcK6HI3EzT0VCfeI-K_3AVkbo33G8cl5L-zyUVSmPA"/>
+            <span class="text-white font-bold block">Innovate Stadia Systems Poland</span>
+            <p class="text-sm mt-2">© 2024 Innovate Stadia Systems Poland.</p>
         </div>
-        <div class="flex gap-8">
-            <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" class="hover:text-white transition-colors">Prywatność</a>
-            <a href="https://innovatestadia.com" class="text-secondary-fixed-dim hover:text-white transition-colors font-bold">Global Portal</a>
+        <div class="flex gap-8 text-sm">
+            <a class="hover:text-white" href="#">LinkedIn</a>
+            <a class="hover:text-white" href="https://innovatestadia.com">Global Portal</a>
         </div>
     </div>
 </footer>
