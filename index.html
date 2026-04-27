@@ -45,7 +45,7 @@
 
         /* --- Nawigacja --- */
         header {
-            background-color: #000000; /* Czarne tło dla idealnego zlania się z Twoim logo */
+            background-color: #000000;
             padding: 10px 5%;
             display: flex;
             justify-content: space-between;
@@ -58,7 +58,7 @@
         }
 
         .logo img {
-            height: 85px; /* Wysokość dopasowana do pionowego logotypu */
+            height: 85px;
             width: auto;
             display: block;
         }
@@ -86,7 +86,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(to bottom, rgba(7, 11, 25, 0.7), var(--navy-dark)), 
-                        url('https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+                        url('10,000 seat Visualisation 7.png') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -147,6 +147,29 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
+        /* --- Partnerzy --- */
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .partner-link {
+            padding: 20px 40px;
+            border: 1px solid var(--silver-border);
+            text-decoration: none;
+            color: var(--silver-accent);
+            font-size: 1.1rem;
+            transition: 0.4s;
+            background: rgba(16, 24, 47, 0.5);
+        }
+        .partner-link:hover {
+            border-color: var(--silver-accent);
+            background: var(--navy-light);
+            transform: scale(1.05);
+        }
+
         /* --- Cechy --- */
         .features { background-color: var(--navy-light); padding: 80px 8%; }
         .features-grid {
@@ -166,7 +189,7 @@
             transform: translateY(-10px);
         }
 
-        /* --- Kontakt (Formularz) --- */
+        /* --- Kontakt --- */
         .contact-section {
             background-color: var(--navy-light);
             padding: 100px 8%;
@@ -197,15 +220,7 @@
             outline: none;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--silver-accent);
-        }
-
-        .contact-form button {
-            width: 100%;
-            margin-top: 20px;
-        }
+        .contact-form button { width: 100%; margin-top: 20px; }
 
         footer {
             background: #000;
@@ -216,7 +231,6 @@
             color: #555;
         }
 
-        /* --- Responsywność --- */
         @media (max-width: 992px) {
             h1 { font-size: 2.5rem; }
             .grid-2 { grid-template-columns: 1fr; }
@@ -235,6 +249,7 @@
             <ul>
                 <li><a href="#home">Start</a></li>
                 <li><a href="#about">Konstrukcje</a></li>
+                <li><a href="#partners">Partnerzy</a></li>
                 <li><a href="#technology">Technologia</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
@@ -252,11 +267,20 @@
             <div class="content-box">
                 <h2>Prestiż i Optymalizacja</h2>
                 <p>Budowa nowoczesnego obiektu sportowego to proces wymagający perfekcyjnej logistyki. Nasz zespół współpracuje z czołowymi architektami, dostarczając systemy modułowe skrojone pod specyficzne potrzeby klubów i samorządów.</p>
-                <p>Wykorzystujemy zaawansowane prefabrykaty, co pozwala nam skrócić czas budowy o połowę w porównaniu do metod tradycyjnych, przy jednoczesnym zachowaniu najwyższej estetyki wykończenia.</p>
+                <p>Wykorzystujemy zaawansowane prefabrykaty, co pozwala nam skrócić czas budowy o połowę w porównaniu do metod tradycyjnych.</p>
             </div>
             <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80" alt="Nowoczesny obiekt sportowy">
+                <img src="10000 Community Stadium with Car park visual 1.png" alt="Wizualizacja Stadionu">
             </div>
+        </div>
+    </section>
+
+    <section class="section" id="partners">
+        <h2>Nasi Partnerzy</h2>
+        <div class="partners-grid">
+            <a href="https://innovatestadia.com" target="_blank" class="partner-link">Innovate Stadia</a>
+            <a href="https://spstechnology.com" target="_blank" class="partner-link">SPS Technology</a>
+            <a href="https://tilea.systems" target="_blank" class="partner-link">Tilea Systems</a>
         </div>
     </section>
 
@@ -264,15 +288,15 @@
         <div class="features-grid">
             <div class="feature-card">
                 <h4>Ekonomia Budowy</h4>
-                <p>Drastyczne obniżenie kosztów inwestycji dzięki eliminacji mokrych prac na placu budowy i skróceniu harmonogramu.</p>
+                <p>Drastyczne obniżenie kosztów inwestycji dzięki eliminacji mokrych prac na placu budowy.</p>
             </div>
             <div class="feature-card">
                 <h4>Bezpieczeństwo</h4>
-                <p>Konstrukcje spełniające najbardziej rygorystyczne normy UEFA i FIFA, gwarantujące pełną stabilność i komfort widzów.</p>
+                <p>Konstrukcje spełniające najbardziej rygorystyczne normy UEFA i FIFA.</p>
             </div>
             <div class="feature-card">
                 <h4>Ekologia</h4>
-                <p>Materiały o wysokim stopniu recyklingu i technologia ograniczająca ślad węglowy całej inwestycji.</p>
+                <p>Materiały o wysokim stopniu recyklingu i technologia ograniczająca ślad węglowy.</p>
             </div>
         </div>
     </section>
@@ -282,10 +306,10 @@
             <div class="content-box" style="direction: ltr;">
                 <h2>Technologia SPS®</h2>
                 <p>Jako partner technologiczny wdrażamy system Sandwich Plate System – rewolucyjną alternatywę dla betonu i stali usztywnianej.</p>
-                <p>System ten, stosowany na świecie od 25 lat, oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości. Jest to idealne rozwiązanie dla modernizacji istniejących trybun oraz budowy nowych aren o wyjątkowej charakterystyce akustycznej.</p>
+                <p>System ten oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości. Idealne dla modernizacji istniejących trybun.</p>
             </div>
             <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80" alt="Inżynieria stadionowa">
+                <img src="20000 capacity Visual 1.png" alt="Technologia Stadiony">
             </div>
         </div>
     </section>
@@ -296,16 +320,10 @@
             <p style="text-align: center; margin-bottom: 35px; color: var(--silver-accent);">
                 Zapraszamy do kontaktu w celu uzyskania doradztwa technicznego lub wyceny projektu.
             </p>
-            
             <form action="https://formsubmit.co/gregborowiec23@gmail.com" method="POST" class="contact-form">
-                <input type="hidden" name="_subject" value="Nowe zapytanie z witryny Innovate Stadia">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-
                 <input type="text" name="name" placeholder="Imię i Nazwisko / Nazwa Firmy" required>
                 <input type="email" name="email" placeholder="Adres e-mail do kontaktu" required>
-                <textarea name="message" placeholder="W czym możemy pomóc? Opisz swój projekt..." rows="6" required></textarea>
-                
+                <textarea name="message" placeholder="W czym możemy pomóc?" rows="6" required></textarea>
                 <button type="submit" class="btn">Wyślij wiadomość</button>
             </form>
         </div>
