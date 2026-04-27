@@ -38,13 +38,15 @@
 
         h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; text-transform: uppercase; }
         h2 { font-size: 2.5rem; margin-bottom: 60px; text-transform: uppercase; text-align: center; }
+        h3 { font-size: 1.8rem; margin-bottom: 20px; }
+        h4 { font-size: 1.2rem; margin-bottom: 15px; text-transform: uppercase; color: var(--silver-main); }
         
         p { font-size: 1rem; color: var(--silver-main); margin-bottom: 20px; text-align: justify; }
 
-        /* --- Nawigacja (POWIĘKSZONE LOGO) --- */
+        /* --- Nawigacja --- */
         header {
             background-color: #000000;
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,10 +58,9 @@
         }
 
         .logo img {
-            height: 120px; /* POWIĘKSZONE LOGO */
+            height: 85px;
             width: auto;
             display: block;
-            transition: 0.3s;
         }
 
         nav ul {
@@ -72,7 +73,7 @@
             color: var(--silver-main);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
             transition: 0.3s;
         }
@@ -81,7 +82,7 @@
             color: var(--silver-accent);
         }
 
-        /* --- Sekcja Hero (ZDJĘCIE TŁA) --- */
+        /* --- Sekcja Hero --- */
         .hero {
             height: 100vh;
             background: linear-gradient(to bottom, rgba(7, 11, 25, 0.7), var(--navy-dark)), 
@@ -92,7 +93,7 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            padding-top: 120px;
+            padding-top: 100px;
         }
 
         .hero h1 {
@@ -100,6 +101,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             max-width: 900px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
         .btn {
@@ -113,12 +121,13 @@
             letter-spacing: 2px;
             text-decoration: none;
             transition: 0.4s;
-            margin-top: 30px;
+            cursor: pointer;
         }
 
         .btn:hover {
             background: var(--silver-accent);
             color: var(--navy-dark);
+            box-shadow: 0 0 20px rgba(232, 235, 245, 0.2);
         }
 
         /* --- Sekcje --- */
@@ -139,28 +148,26 @@
         }
 
         /* --- Partnerzy --- */
-        .partners-section { background-color: var(--navy-dark); padding: 80px 8%; border-top: 1px solid var(--silver-border); }
         .partners-grid {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
         .partner-link {
-            padding: 25px 45px;
+            padding: 20px 40px;
             border: 1px solid var(--silver-border);
             text-decoration: none;
             color: var(--silver-accent);
-            font-weight: 300;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-size: 1.1rem;
             transition: 0.4s;
-            background: rgba(16, 24, 47, 0.4);
+            background: rgba(16, 24, 47, 0.5);
         }
         .partner-link:hover {
             border-color: var(--silver-accent);
             background: var(--navy-light);
-            transform: translateY(-5px);
+            transform: scale(1.05);
         }
 
         /* --- Cechy --- */
@@ -175,10 +182,19 @@
             padding: 45px 35px;
             text-align: center;
             border: 1px solid var(--silver-border);
+            transition: 0.4s;
+        }
+        .feature-card:hover {
+            border-color: var(--silver-accent);
+            transform: translateY(-10px);
         }
 
         /* --- Kontakt --- */
-        .contact-section { background-color: var(--navy-light); padding: 100px 8%; }
+        .contact-section {
+            background-color: var(--navy-light);
+            padding: 100px 8%;
+        }
+        
         .contact-container {
             max-width: 750px;
             margin: 0 auto;
@@ -186,22 +202,40 @@
             padding: 50px;
             border: 1px solid var(--silver-border);
         }
-        .contact-form { display: flex; flex-direction: column; gap: 15px; }
-        .contact-form input, .contact-form textarea {
-            width: 100%; padding: 18px; background: rgba(255,255,255,0.03);
-            border: 1px solid var(--silver-border); color: var(--text-light); outline: none;
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px;
+            background-color: rgba(255,255,255,0.03);
+            border: 1px solid var(--silver-border);
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .contact-form button { width: 100%; margin-top: 20px; }
+
         footer {
-            background: #000; text-align: center; padding: 40px 20px;
-            border-top: 1px solid var(--silver-border); font-size: 0.8rem; color: #555;
+            background: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--silver-border);
+            font-size: 0.8rem;
+            color: #555;
         }
 
         @media (max-width: 992px) {
             h1 { font-size: 2.5rem; }
             .grid-2 { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
-            .logo img { height: 80px; }
+            nav { display: none; }
         }
     </style>
 </head>
@@ -233,7 +267,7 @@
             <div class="content-box">
                 <h2>Prestiż i Optymalizacja</h2>
                 <p>Budowa nowoczesnego obiektu sportowego to proces wymagający perfekcyjnej logistyki. Nasz zespół współpracuje z czołowymi architektami, dostarczając systemy modułowe skrojone pod specyficzne potrzeby klubów i samorządów.</p>
-                <p>Wykorzystujemy zaawansowane prefabrykaty, co pozwala nam skrócić czas budowy o połowę w porównaniu do metod tradycyjnych, przy jednoczesnym zachowaniu najwyższej estetyki wykończenia.</p>
+                <p>Wykorzystujemy zaawansowane prefabrykaty, co pozwala nam skrócić czas budowy o połowę w porównaniu do metod tradycyjnych.</p>
             </div>
             <div class="image-box">
                 <img src="10000 Community Stadium with Car park visual 1.png" alt="Wizualizacja Stadionu">
@@ -241,7 +275,7 @@
         </div>
     </section>
 
-    <section class="partners-section" id="partners">
+    <section class="section" id="partners">
         <h2>Nasi Partnerzy</h2>
         <div class="partners-grid">
             <a href="https://innovatestadia.com" target="_blank" class="partner-link">Innovate Stadia</a>
@@ -258,11 +292,11 @@
             </div>
             <div class="feature-card">
                 <h4>Bezpieczeństwo</h4>
-                <p>Konstrukcje spełniające najbardziej rygorystyczne normy UEFA i FIFA, gwarantujące pełną stabilność.</p>
+                <p>Konstrukcje spełniające najbardziej rygorystyczne normy UEFA i FIFA.</p>
             </div>
             <div class="feature-card">
                 <h4>Ekologia</h4>
-                <p>Materiały o wysokim stopniu recyklingu i technologia ograniczająca ślad węglowy inwestycji.</p>
+                <p>Materiały o wysokim stopniu recyklingu i technologia ograniczająca ślad węglowy.</p>
             </div>
         </div>
     </section>
@@ -272,10 +306,10 @@
             <div class="content-box" style="direction: ltr;">
                 <h2>Technologia SPS®</h2>
                 <p>Jako partner technologiczny wdrażamy system Sandwich Plate System – rewolucyjną alternatywę dla betonu i stali usztywnianej.</p>
-                <p>System ten oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości. Jest to idealne rozwiązanie dla modernizacji istniejących trybun oraz budowy nowych aren.</p>
+                <p>System ten oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości. Idealne dla modernizacji istniejących trybun.</p>
             </div>
             <div class="image-box">
-                <img src="20000 capacity Visual 1.png" alt="Inżynieria stadionowa">
+                <img src="20000 capacity Visual 1.png" alt="Technologia Stadiony">
             </div>
         </div>
     </section>
@@ -289,8 +323,8 @@
             <form action="https://formsubmit.co/gregborowiec23@gmail.com" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Imię i Nazwisko / Nazwa Firmy" required>
                 <input type="email" name="email" placeholder="Adres e-mail do kontaktu" required>
-                <textarea name="message" placeholder="W czym możemy pomóc? Opisz swój projekt..." rows="6" required></textarea>
-                <button type="submit" class="btn" style="width: 100%;">Wyślij wiadomość</button>
+                <textarea name="message" placeholder="W czym możemy pomóc?" rows="6" required></textarea>
+                <button type="submit" class="btn">Wyślij wiadomość</button>
             </form>
         </div>
     </section>
