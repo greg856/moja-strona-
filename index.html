@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovate Stadia Systems Poland | Prestiżowe Obiekty Sportowe</title>
     <style>
-        /* --- Zmienne kolorystyczne --- */
         :root {
             --navy-dark: #070B19;
             --navy-light: #10182F;
@@ -29,17 +28,16 @@
             overflow-x: hidden;
         }
 
-        /* --- Typografia --- */
         h1, h2, h3, h4 {
             font-weight: 300;
             letter-spacing: 2px;
             color: var(--silver-accent);
+            text-transform: uppercase;
         }
 
-        h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; text-transform: uppercase; }
-        h2 { font-size: 2.5rem; margin-bottom: 60px; text-transform: uppercase; text-align: center; }
-        
-        p { font-size: 1rem; color: var(--silver-main); margin-bottom: 20px; text-align: justify; }
+        h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; }
+        h2 { font-size: 2.5rem; margin-bottom: 60px; text-align: center; }
+        p { font-size: 1rem; color: var(--silver-main); margin-bottom: 20px; }
 
         /* --- Nawigacja --- */
         header {
@@ -56,7 +54,7 @@
         }
 
         .logo img {
-            height: 120px; /* DUŻE LOGO FIRMY */
+            height: 120px; /* Duże logo zgodnie z prośbą */
             width: auto;
             display: block;
         }
@@ -70,28 +68,24 @@
         nav ul li a {
             color: var(--silver-main);
             text-decoration: none;
-            text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 2px;
             transition: 0.3s;
         }
 
-        nav ul li a:hover {
-            color: var(--silver-accent);
-        }
+        nav ul li a:hover { color: var(--silver-accent); }
 
-        /* --- Sekcja Hero --- */
+        /* --- Sekcja Hero - POPRAWIONE WYŚRODKOWANIE --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(to bottom, rgba(7, 11, 25, 0.7), var(--navy-dark)), 
-                        url('10,000 seat Visualisation 7.png') center/cover no-repeat;
+            background: linear-gradient(to bottom, rgba(7, 11, 25, 0.8), var(--navy-dark)), 
+                        url('stadion1.png') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
+            align-items: center; /* Wyśrodkowanie w poziomie */
+            text-align: center;   /* Wyśrodkowanie tekstu */
             padding: 0 20px;
-            padding-top: 120px;
         }
 
         .hero h1 {
@@ -99,6 +93,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             max-width: 900px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 40px auto; /* Centrowanie akapitu */
+            text-align: center;
         }
 
         .btn {
@@ -112,7 +112,6 @@
             letter-spacing: 2px;
             text-decoration: none;
             transition: 0.4s;
-            margin-top: 30px;
         }
 
         .btn:hover {
@@ -138,60 +137,36 @@
         }
 
         /* --- Partnerzy --- */
-        .partners-section { background-color: var(--navy-dark); padding: 80px 8%; border-top: 1px solid var(--silver-border); }
         .partners-grid {
             display: flex;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
         .partner-link {
-            padding: 25px 45px;
+            padding: 20px 40px;
             border: 1px solid var(--silver-border);
             text-decoration: none;
             color: var(--silver-accent);
-            text-transform: uppercase;
             transition: 0.4s;
             background: rgba(16, 24, 47, 0.4);
         }
-        .partner-link:hover {
-            border-color: var(--silver-accent);
-            background: var(--navy-light);
-        }
-
-        /* --- Cechy --- */
-        .features { background-color: var(--navy-light); padding: 80px 8%; }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        .feature-card {
-            background: var(--navy-dark);
-            padding: 45px 35px;
-            text-align: center;
-            border: 1px solid var(--silver-border);
-        }
-
-        /* --- Kontakt --- */
-        .contact-section { background-color: var(--navy-light); padding: 100px 8%; }
-        .contact-container {
-            max-width: 750px;
-            margin: 0 auto;
-            background: var(--navy-dark);
-            padding: 50px;
-            border: 1px solid var(--silver-border);
-        }
+        .partner-link:hover { border-color: var(--silver-accent); background: var(--navy-light); }
 
         footer {
-            background: #000; text-align: center; padding: 40px 20px;
-            border-top: 1px solid var(--silver-border); font-size: 0.8rem; color: #555;
+            background: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--silver-border);
+            font-size: 0.8rem;
+            color: #555;
         }
 
         @media (max-width: 992px) {
             h1 { font-size: 2.5rem; }
             .grid-2 { grid-template-columns: 1fr; }
-            .features-grid { grid-template-columns: 1fr; }
+            .logo img { height: 80px; }
         }
     </style>
 </head>
@@ -214,7 +189,7 @@
 
     <section class="hero" id="home">
         <h1>Architektura<br>Nowej Generacji</h1>
-        <p>Innovate Stadia Systems Poland dostarcza światowej klasy inżynierię stadionową.</p>
+        <p>Innovate Stadia Systems Poland dostarcza światowej klasy inżynierię stadionową. Tworzymy obiekty szybkie w realizacji i zoptymalizowane kosztowo.</p>
         <a href="#about" class="btn">Poznaj nasze rozwiązania</a>
     </section>
 
@@ -222,15 +197,16 @@
         <div class="grid-2">
             <div class="content-box">
                 <h2>Prestiż i Optymalizacja</h2>
-                <p>Nasz zespół współpracuje z czołowymi architektami, dostarczając systemy modułowe skrojone pod specyficzne potrzeby.</p>
+                <p style="text-align: justify;">Budowa nowoczesnego obiektu sportowego to proces wymagający perfekcyjnej logistyki. Nasz zespół dostarcza systemy modułowe skrojone pod specyficzne potrzeby klubów i samorządów.</p>
+                <p style="text-align: justify;">Wykorzystujemy zaawansowane prefabrykaty, co pozwala nam skrócić czas budowy o połowę, zachowując najwyższą estetykę wykończenia.</p>
             </div>
             <div class="image-box">
-                <img src="10000 Community Stadium with Car park visual 1.png" alt="Wizualizacja Stadionu">
+                <img src="stadion1.png" alt="Wizualizacja Stadionu">
             </div>
         </div>
     </section>
 
-    <section class="partners-section" id="partners">
+    <section class="section" id="partners">
         <h2>Nasi Partnerzy</h2>
         <div class="partners-grid">
             <a href="https://innovatestadia.com" target="_blank" class="partner-link">Innovate Stadia</a>
@@ -243,7 +219,7 @@
         <div class="grid-2" style="direction: rtl;">
             <div class="content-box" style="direction: ltr;">
                 <h2>Technologia SPS®</h2>
-                <p>System ten oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości.</p>
+                <p>System Sandwich Plate System to rewolucyjna alternatywa dla betonu. Oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości.</p>
             </div>
             <div class="image-box">
                 <img src="20000 capacity Visual 1.png" alt="Technologia Stadiony">
@@ -251,11 +227,9 @@
         </div>
     </section>
 
-    <section class="contact-section" id="contact">
-        <h2 style="text-align: center;">Zapytania Biznesowe</h2>
-        <div class="contact-container">
-            <p style="text-align: center;">Kontakt: gregborowiec23@gmail.com</p>
-        </div>
+    <section class="section" id="contact" style="background-color: var(--navy-light); text-align: center;">
+        <h2>Kontakt</h2>
+        <p>Zapraszamy do współpracy: gregborowiec23@gmail.com</p>
     </section>
 
     <footer>
