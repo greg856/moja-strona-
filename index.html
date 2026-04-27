@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovate Stadia Systems Poland | Nowoczesna Infrastruktura Sportowa</title>
+    <title>Innovate Stadia Systems Poland | Infrastruktura Sportowa Premium</title>
     <style>
         :root {
             --granat-premium: #0A192F;
@@ -11,12 +11,12 @@
             --tlo-jasne: #FFFFFF;
             --tekst-glowny: #111827;
             --tekst-szary: #4B5563;
+            --border: #E5E7EB;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--tlo-jasne); color: var(--tekst-glowny); line-height: 1.8; }
 
-        /* Nawigacja */
         header {
             background: rgba(255, 255, 255, 0.98);
             padding: 10px 8%;
@@ -31,24 +31,21 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         
-        /* Logo powiększone do 130px zgodnie z prośbą */
         .logo img { height: 130px; width: auto; display: block; }
 
         nav ul { list-style: none; display: flex; gap: 40px; }
         nav ul li a { color: var(--granat-premium); text-decoration: none; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; transition: 0.3s; }
         nav ul li a:hover { color: var(--niebieski-akcent); }
 
-        /* Sekcja powitalna */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(10, 25, 47, 0.5), rgba(10, 25, 47, 0.7)), 
+            background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.8)), 
                         url('hero.png') center/cover no-repeat;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%;
             color: #fff;
-            margin-top: 50px;
         }
-        .hero h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; }
-        .hero p { font-size: 1.3rem; max-width: 800px; margin-bottom: 40px; opacity: 0.9; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; }
+        .hero p { font-size: 1.3rem; max-width: 850px; margin-bottom: 40px; opacity: 0.9; }
 
         .przycisk-premium {
             padding: 20px 45px; background: var(--niebieski-akcent); color: white; text-decoration: none; 
@@ -56,7 +53,6 @@
         }
         .przycisk-premium:hover { background: #fff; color: var(--granat-premium); transform: translateY(-3px); }
 
-        /* Sekcje treści */
         .sekcja { padding: 120px 10%; }
         .tlo-szare { background-color: #F9FAFB; }
         .uklad-siatki { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -66,31 +62,36 @@
 
         .tekst-tresci p { font-size: 1.15rem; color: var(--tekst-szary); margin-bottom: 20px; text-align: justify; }
 
-        .kontener-obrazu { border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .kontener-obrazu { border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid var(--border); }
         .kontener-obrazu img { width: 100%; display: block; transition: 0.5s; }
 
-        /* Statystyki */
-        .pasek-statystyk { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 50px; text-align: center; }
-        .statystyka h3 { font-size: 2.2rem; color: var(--niebieski-akcent); font-weight: 800; }
-        .statystyka p { font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: var(--granat-premium); }
+        /* Sekcja Partnerzy */
+        .partnerzy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+        .partner-karta { 
+            padding: 40px; background: white; border: 1px solid var(--border); border-radius: 8px; 
+            text-align: center; transition: 0.3s; text-decoration: none; color: inherit;
+        }
+        .partner-karta:hover { border-color: var(--niebieski-akcent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .partner-karta h4 { color: var(--granat-premium); font-size: 1.2rem; margin-bottom: 15px; text-transform: uppercase; }
+        .partner-karta p { font-size: 0.95rem; color: var(--tekst-szary); margin-bottom: 20px; }
+        .link-partner { color: var(--niebieski-akcent); font-weight: 700; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; }
 
         /* Kontakt */
         .kontakt-kontener { display: grid; grid-template-columns: 1fr 1.5fr; background: white; box-shadow: 0 40px 100px rgba(0,0,0,0.06); border-radius: 12px; overflow: hidden; }
         .kontakt-info { background: var(--granat-premium); color: white; padding: 60px; }
         .kontakt-formularz { padding: 60px; }
-        .kontakt-formularz input, .kontakt-formularz textarea { width: 100%; padding: 18px; margin-bottom: 20px; border: 1px solid #E5E7EB; border-radius: 4px; font-size: 1rem; background: #F9FAFB; }
+        .kontakt-formularz input, .kontakt-formularz textarea { width: 100%; padding: 18px; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 4px; font-size: 1rem; background: #F9FAFB; }
         .przycisk-wyslij { width: 100%; padding: 20px; background: var(--niebieski-akcent); color: white; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
-        .przycisk-wyslij:hover { background: var(--granat-premium); }
 
         footer { background: #050C16; padding: 60px 10%; color: #94A3B8; text-align: center; border-top: 4px solid var(--niebieski-akcent); }
 
-        @media (max-width: 1024px) { .uklad-siatki, .kontakt-kontener { grid-template-columns: 1fr; } .hero h1 { font-size: 2.4rem; } .logo img { height: 90px; } }
+        @media (max-width: 1024px) { .uklad-siatki, .partnerzy-grid, .kontakt-kontener { grid-template-columns: 1fr; } .logo img { height: 90px; } }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo"><img src="logo1.png" alt="Logo Firmy"></div>
+        <div class="logo"><img src="logo1.png" alt="Logo Innovate Stadia"></div>
         <nav>
             <ul>
                 <li><a href="#o-nas">O firmie</a></li>
@@ -101,27 +102,21 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Projektujemy Przyszłość Aren Sportowych</h1>
-        <p>Innovate Stadia Systems Poland dostarcza światowej klasy inżynierię. Tworzymy obiekty szybkie w realizacji, zoptymalizowane kosztowo i bezkompromisowe pod względem jakości.</p>
-        <a href="#kontakt" class="przycisk-premium">Zapytanie Biznesowe</a>
+    <section class="hero" id="home">
+        <h1>Nowoczesna Inżynieria Stadionowa</h1>
+        <p>Innovate Stadia Systems Poland dostarcza światowej klasy systemy modułowe. Tworzymy obiekty szybkie w realizacji, zoptymalizowane kosztowo i bezkompromisowe pod względem jakości.</p>
+        <a href="#kontakt" class="przycisk-premium">Rozpocznij współpracę</a>
     </section>
 
     <section class="sekcja" id="o-nas">
         <div class="uklad-siatki">
             <div class="tekst-tresci">
-                <h2>Prestiżowa Realizacja</h2>
-                <p>Budowa nowoczesnego stadionu to proces wymagający najwyższej precyzji. Nasze systemy modułowe pozwalają na skrócenie czasu inwestycji o połowę, przy jednoczesnym zachowaniu standardów premium.</p>
-                <p>Współpracujemy z czołowymi architektami, aby każda trybuna spełniała najbardziej rygorystyczne wymogi federacji międzynarodowych.</p>
-                <div class="pasek-statystyk">
-                    <div class="statystyka"><h3>-50%</h3><p>Czasu budowy</p></div>
-                    <div class="statystyka"><h3>20tys+</h3><p>Miejsc</p></div>
-                    <div class="statystyka"><h3>UEFA</h3><p>Standard</p></div>
-                    <div class="statystyka"><h3>SPS</h3><p>System</p></div>
-                </div>
+                <h2>Prestiż i Optymalizacja</h2>
+                <p>Budowa nowoczesnego stadionu to proces wymagający najwyższej precyzji logistycznej. Nasze systemy pozwalają na skrócenie czasu inwestycji o połowę, przy jednoczesnym zachowaniu standardów klasy premium.</p>
+                <p>Współpracujemy z czołowymi biurami projektowymi na świecie, aby każda trybuna spełniała najbardziej rygorystyczne wymogi bezpieczeństwa i estetyki.</p>
             </div>
             <div class="kontener-obrazu">
-                <img src="stadion.jpg" alt="Wizualizacja stadionu">
+                <img src="20000 capacity Visual 1.png" alt="Wizualizacja projektu stadionu">
             </div>
         </div>
     </section>
@@ -129,30 +124,54 @@
     <section class="sekcja tlo-szare" id="technologia">
         <div class="uklad-siatki">
             <div class="kontener-obrazu" style="order: 2;">
-                <img src="stadion2.png" alt="Technologia budowy">
+                <img src="20000 visual 4.png" alt="Szczegóły technologiczne SPS">
             </div>
             <div class="tekst-tresci" style="order: 1;">
-                <h2>Technologia Systemu Sandwich Plate</h2>
-                <p>Nasz system to rewolucyjna alternatywa dla betonu. Wykorzystujemy zaawansowany kompozyt stalowo-elastomerowy, który zapewnia lekkość konstrukcji, niesamowitą trwałość i doskonałą akustykę obiektu.</p>
-                <p>To rozwiązanie wybrane przez największe areny na świecie, gwarantujące odporność na korozję oraz najwyższy poziom bezpieczeństwa dla kibiców.</p>
+                <h2>System Sandwich Plate (SPS®)</h2>
+                <p>Nasz system to rewolucyjna alternatywa dla betonu. Wykorzystujemy zaawansowany kompozyt stalowo-elastomerowy, który zapewnia wyjątkową lekkość konstrukcji przy niespotykanej trwałości.</p>
+                <p>SPS® gwarantuje doskonałą akustykę obiektu oraz całkowitą odporność na pękanie i korozję, co czyni go idealnym wyborem dla elitarnych aren sportowych.</p>
             </div>
         </div>
     </section>
 
-    <section class="sekcja" id="kontakt">
+    <section class="sekcja" id="partnerzy">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2>Globalni Partnerzy Strategiczni</h2>
+            <p style="color: var(--tekst-szary); max-width: 700px; margin: 0 auto;">Współpracujemy z liderami technologii inżynieryjnej, aby dostarczać rozwiązania sprawdzone na największych rynkach światowych.</p>
+        </div>
+        <div class="partnerzy-grid">
+            <a href="https://innovatestadia.com" target="_blank" class="partner-karta">
+                <h4>Innovate Stadia</h4>
+                <p>Globalny lider w projektowaniu i dostarczaniu modułowych systemów stadionowych nowej generacji.</p>
+                <span class="link-partner">Odwiedź stronę &rarr;</span>
+            </a>
+            <a href="https://spstechnology.com" target="_blank" class="partner-karta">
+                <h4>SPS Technology</h4>
+                <p>Właściciel patentu technologii Sandwich Plate System, rewolucjonizującej konstrukcje stalowe.</p>
+                <span class="link-partner">Odwiedź stronę &rarr;</span>
+            </a>
+            <a href="https://tilea.systems" target="_blank" class="partner-karta">
+                <h4>Tilea Systems</h4>
+                <p>Eksperci w zakresie logistyki i wdrażania zaawansowanych systemów prefabrykacji budowlanej.</p>
+                <span class="link-partner">Odwiedź stronę &rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="sekcja tlo-szare" id="kontakt">
         <div class="kontakt-kontener">
             <div class="kontakt-info">
-                <h2>Kontakt</h2>
-                <p>Zapraszamy do rozmów o Państwa planowanych inwestycjach. Nasi inżynierowie przygotują wstępną analizę technologiczną.</p>
+                <h2>Kontakt Biznesowy</h2>
+                <p>Zapraszamy inwestorów oraz biura projektowe do rozmów o nowoczesnych systemach budowlanych.</p>
                 <div style="margin-top: 50px;">
-                    <p style="font-weight: 700; color: var(--niebieski-akcent); text-transform: uppercase;">Siedziba główna</p>
+                    <p style="font-weight: 700; color: var(--niebieski-akcent); text-transform: uppercase; font-size: 0.8rem;">Siedziba główna</p>
                     <p style="font-size: 1.2rem; margin-top: 10px;">Aleja Jana Pawła II 27</p>
                     <p style="font-size: 1.2rem;">00-867 Warszawa</p>
                 </div>
             </div>
             <div class="kontakt-formularz">
                 <form action="https://formsubmit.co/gregborowiec23@gmail.com" method="POST">
-                    <input type="text" name="imie" placeholder="Imię i Nazwisko / Nazwa firmy" required>
+                    <input type="text" name="imie" placeholder="Imię i Nazwisko / Firma" required>
                     <input type="email" name="email" placeholder="Adres e-mail" required>
                     <textarea name="wiadomosc" rows="5" placeholder="Zakres planowanej inwestycji..." required></textarea>
                     <button type="submit" class="przycisk-wyslij">Wyślij zapytanie</button>
