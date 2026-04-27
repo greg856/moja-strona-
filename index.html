@@ -41,7 +41,7 @@
         
         p { font-size: 1rem; color: var(--silver-main); margin-bottom: 20px; text-align: justify; }
 
-        /* --- Nawigacja (POWIĘKSZONE LOGO) --- */
+        /* --- Nawigacja --- */
         header {
             background-color: #000000;
             padding: 15px 5%;
@@ -56,10 +56,9 @@
         }
 
         .logo img {
-            height: 120px; /* POWIĘKSZONE LOGO */
+            height: 120px; /* DUŻE LOGO FIRMY */
             width: auto;
             display: block;
-            transition: 0.3s;
         }
 
         nav ul {
@@ -81,7 +80,7 @@
             color: var(--silver-accent);
         }
 
-        /* --- Sekcja Hero (ZDJĘCIE TŁA) --- */
+        /* --- Sekcja Hero --- */
         .hero {
             height: 100vh;
             background: linear-gradient(to bottom, rgba(7, 11, 25, 0.7), var(--navy-dark)), 
@@ -151,8 +150,6 @@
             border: 1px solid var(--silver-border);
             text-decoration: none;
             color: var(--silver-accent);
-            font-weight: 300;
-            letter-spacing: 2px;
             text-transform: uppercase;
             transition: 0.4s;
             background: rgba(16, 24, 47, 0.4);
@@ -160,7 +157,6 @@
         .partner-link:hover {
             border-color: var(--silver-accent);
             background: var(--navy-light);
-            transform: translateY(-5px);
         }
 
         /* --- Cechy --- */
@@ -186,11 +182,6 @@
             padding: 50px;
             border: 1px solid var(--silver-border);
         }
-        .contact-form { display: flex; flex-direction: column; gap: 15px; }
-        .contact-form input, .contact-form textarea {
-            width: 100%; padding: 18px; background: rgba(255,255,255,0.03);
-            border: 1px solid var(--silver-border); color: var(--text-light); outline: none;
-        }
 
         footer {
             background: #000; text-align: center; padding: 40px 20px;
@@ -201,7 +192,6 @@
             h1 { font-size: 2.5rem; }
             .grid-2 { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
-            .logo img { height: 80px; }
         }
     </style>
 </head>
@@ -224,7 +214,7 @@
 
     <section class="hero" id="home">
         <h1>Architektura<br>Nowej Generacji</h1>
-        <p>Innovate Stadia Systems Poland dostarcza światowej klasy inżynierię stadionową. Tworzymy obiekty szybkie w realizacji, zoptymalizowane kosztowo i bezkompromisowe pod względem jakości.</p>
+        <p>Innovate Stadia Systems Poland dostarcza światowej klasy inżynierię stadionową.</p>
         <a href="#about" class="btn">Poznaj nasze rozwiązania</a>
     </section>
 
@@ -232,8 +222,7 @@
         <div class="grid-2">
             <div class="content-box">
                 <h2>Prestiż i Optymalizacja</h2>
-                <p>Budowa nowoczesnego obiektu sportowego to proces wymagający perfekcyjnej logistyki. Nasz zespół współpracuje z czołowymi architektami, dostarczając systemy modułowe skrojone pod specyficzne potrzeby klubów i samorządów.</p>
-                <p>Wykorzystujemy zaawansowane prefabrykaty, co pozwala nam skrócić czas budowy o połowę w porównaniu do metod tradycyjnych, przy jednoczesnym zachowaniu najwyższej estetyki wykończenia.</p>
+                <p>Nasz zespół współpracuje z czołowymi architektami, dostarczając systemy modułowe skrojone pod specyficzne potrzeby.</p>
             </div>
             <div class="image-box">
                 <img src="10000 Community Stadium with Car park visual 1.png" alt="Wizualizacja Stadionu">
@@ -250,53 +239,27 @@
         </div>
     </section>
 
-    <section class="features">
-        <div class="features-grid">
-            <div class="feature-card">
-                <h4>Ekonomia Budowy</h4>
-                <p>Drastyczne obniżenie kosztów inwestycji dzięki eliminacji mokrych prac na placu budowy.</p>
-            </div>
-            <div class="feature-card">
-                <h4>Bezpieczeństwo</h4>
-                <p>Konstrukcje spełniające najbardziej rygorystyczne normy UEFA i FIFA, gwarantujące pełną stabilność.</p>
-            </div>
-            <div class="feature-card">
-                <h4>Ekologia</h4>
-                <p>Materiały o wysokim stopniu recyklingu i technologia ograniczająca ślad węglowy inwestycji.</p>
-            </div>
-        </div>
-    </section>
-
     <section class="section" id="technology">
         <div class="grid-2" style="direction: rtl;">
             <div class="content-box" style="direction: ltr;">
                 <h2>Technologia SPS®</h2>
-                <p>Jako partner technologiczny wdrażamy system Sandwich Plate System – rewolucyjną alternatywę dla betonu i stali usztywnianej.</p>
-                <p>System ten oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości. Jest to idealne rozwiązanie dla modernizacji istniejących trybun oraz budowy nowych aren.</p>
+                <p>System ten oferuje lekkość konstrukcji przy zachowaniu ekstremalnej wytrzymałości.</p>
             </div>
             <div class="image-box">
-                <img src="20000 capacity Visual 1.png" alt="Inżynieria stadionowa">
+                <img src="20000 capacity Visual 1.png" alt="Technologia Stadiony">
             </div>
         </div>
     </section>
 
     <section class="contact-section" id="contact">
-        <h2 style="margin-bottom: 20px;">Zapytania Biznesowe</h2>
+        <h2 style="text-align: center;">Zapytania Biznesowe</h2>
         <div class="contact-container">
-            <p style="text-align: center; margin-bottom: 35px; color: var(--silver-accent);">
-                Zapraszamy do kontaktu w celu uzyskania doradztwa technicznego lub wyceny projektu.
-            </p>
-            <form action="https://formsubmit.co/gregborowiec23@gmail.com" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Imię i Nazwisko / Nazwa Firmy" required>
-                <input type="email" name="email" placeholder="Adres e-mail do kontaktu" required>
-                <textarea name="message" placeholder="W czym możemy pomóc? Opisz swój projekt..." rows="6" required></textarea>
-                <button type="submit" class="btn" style="width: 100%;">Wyślij wiadomość</button>
-            </form>
+            <p style="text-align: center;">Kontakt: gregborowiec23@gmail.com</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Innovate Stadia Systems Poland. Projektowanie i realizacja obiektów sportowych klasy premium.</p>
+        <p>&copy; 2026 Innovate Stadia Systems Poland.</p>
     </footer>
 
 </body>
