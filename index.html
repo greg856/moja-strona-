@@ -56,8 +56,42 @@
         .image-frame { border-radius: 4px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.05); border: 1px solid #F1F5F9; }
         .image-frame img { width: 100%; display: block; }
 
+        /* Sekcja Projektów - Galeria z multimediami */
+        .projects-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+        .media-card {
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            background: white;
+            border: 1px solid #E2E8F0;
+        }
+        .media-card img, .media-card video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .media-card-info {
+            padding: 20px;
+        }
+        .media-card-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--navy-deep);
+        }
+
         /* Karty Partnerów */
-        .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px; }
+        .partner-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
         .partner-card { padding: 40px; background: white; border: 1px solid #E2E8F0; border-radius: 2px; text-align: center; text-decoration: none; color: inherit; transition: 0.3s; }
         .partner-card:hover { border-top: 4px solid var(--accent-blue); transform: translateY(-10px); }
 
@@ -70,11 +104,11 @@
 
         /* POPRAWKA NA TELEFONY - zapobiega nachodzeniu tekstów */
         @media (max-width: 1024px) {
-            .grid, .contact-box, .partner-grid { grid-template-columns: 1fr; gap: 40px; }
+            .grid, .contact-box { grid-template-columns: 1fr; gap: 40px; }
             .hero h1 { font-size: 2.2rem; }
             .logo img { height: 90px; }
             header { flex-direction: column; padding: 10px; }
-            nav ul { gap: 15px; margin-top: 10px; }
+            nav ul { gap: 15px; margin-top: 10px; flex-wrap: wrap; justify-content: center; }
             .image-frame { order: -1; } /* Zdjęcie nad tekstem na mobile */
         }
     </style>
@@ -87,6 +121,7 @@
             <ul>
                 <li><a href="#o-nas">O firmie</a></li>
                 <li><a href="#technologia">Inżynieria</a></li>
+                <li><a href="#projekty">Projekty</a></li>
                 <li><a href="#partnerzy">Partnerzy</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
@@ -129,7 +164,42 @@
         </div>
     </section>
 
-    <section class="section" id="partnerzy">
+    <section class="section" id="projekty">
+        <div style="text-align: center;">
+            <h2>Nasze Projekty</h2>
+            <p>Galeria realizacji i multimediów.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="media-card">
+                <img src="projekt1.jpg" alt="Zmień to zdjęcie" />
+                <div class="media-card-info">
+                    <h3>Stadion Miejski</h3>
+                    <p>Realizacja modułowa trybuny głównej. Systemy kompozytowe w praktyce.</p>
+                </div>
+            </div>
+            
+            <div class="media-card">
+                <video controls>
+                    <source src="wideo1.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje tagu video.
+                </video>
+                <div class="media-card-info">
+                    <h3>Montaż Konstrukcji (Wideo)</h3>
+                    <p>Zobacz jak przyspieszony proces instalacji wygląda na placu budowy.</p>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <img src="projekt2.jpg" alt="Zmień to zdjęcie" />
+                <div class="media-card-info">
+                    <h3>Akustyka i Design</h3>
+                    <p>Zastosowanie nowoczesnych metod tłumienia i wykończenia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-gray" id="partnerzy">
         <div style="text-align: center; margin-bottom: 60px;">
             <h2>Partnerstwo i Wiedza</h2>
             <p>Łączymy globalną wiedzę techniczną z polskim wykonawstwem High-End.</p>
@@ -143,10 +213,14 @@
                 <h3>TILEA SYSTEMS</h3>
                 <p>Innowacyjne rozwiązania logistyczne i montażowe.</p>
             </a>
+            <a href="https://awl.ie/" target="_blank" class="partner-card">
+                <h3>AWL</h3>
+                <p>Inżynieria oraz rozwiązania budowlane nowej generacji na rynkach międzynarodowych.</p>
+            </a>
         </div>
     </section>
 
-    <section class="section bg-gray" id="kontakt">
+    <section class="section" id="kontakt">
         <div class="contact-box">
             <div>
                 <h2>Porozmawiajmy o Twoim projekcie</h2>
