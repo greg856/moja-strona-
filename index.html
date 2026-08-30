@@ -1,216 +1,160 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Innovate Stadia Systems Poland – Architektura i Inżynieria Stadionowa</title>
-  <meta name="description" content="Wyłączny przedstawiciel Innovate Stadia Ltd. w Polsce. Modułowe systemy stadionowe, kompozyty strukturalne i wykonawstwo klasy UEFA/FIFA.">
-  
-  <style>
-    /* Oryginalne style wbudowane bezpośrednio do pliku */
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
-    :root {
-      --bg-main: #0b0d10;
-      --bg-card: #12151c;
-      --border-color: #222735;
-      --text-main: #ffffff;
-      --text-muted: #a0aec0;
-      --accent-cyan: #00d2ff;
-      --accent-magenta: #e024b3;
-      --accent-orange: #ff6b00;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      font-family: 'IBM Plex Sans', sans-serif;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, .stat-num {
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .nav {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand img {
-      height: 48px;
-      width: auto;
-      display: block;
-    }
-
-    .navlinks {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .navlinks a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .navlinks a:hover, .navlinks a.active {
-      color: var(--text-main);
-    }
-
-    .navlinks a.cta {
-      background: #ffffff;
-      color: #000000;
-      padding: 0.6rem 1.2rem;
-      font-weight: 600;
-      border-radius: 2px;
-    }
-
-    .hero {
-      padding: 6rem 2rem 4rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .hero-sub {
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      max-width: 800px;
-    }
-
-    .hero-desc {
-      color: var(--text-muted);
-      font-size: 1.2rem;
-      max-width: 650px;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 4rem;
-    }
-
-    .btn-primary {
-      background: #ffffff;
-      color: #000000;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      font-weight: 700;
-      font-family: 'IBM Plex Mono', monospace;
-      text-transform: uppercase;
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 1rem 2rem;
-      text-decoration: none;
-      font-weight: 700;
-      font-family: 'IBM Plex Mono', monospace;
-      text-transform: uppercase;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1px;
-      background: var(--border-color);
-      border: 1px solid var(--border-color);
-    }
-
-    .stat-card {
-      background: var(--bg-card);
-      padding: 2rem;
-    }
-
-    .stat-num {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-num.c1 { color: var(--accent-cyan); }
-    .stat-num.c2 { color: var(--accent-magenta); }
-    .stat-num.c3 { color: var(--accent-orange); }
-
-    .stat-label {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-family: 'IBM Plex Mono', monospace;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Innovate Stadia Systems Poland — Architektura i Inżynieria Stadionowa</title>
+<meta name="description" content="Wyłączny przedstawiciel Innovate Stadia Ltd. w Polsce. Modułowe systemy stadionowe, kompozyty strukturalne i wykonawstwo klasy UEFA/FIFA.">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="wrap">
-      <a href="index.html" class="brand">
-        <img class="logo-mark" src="logo.png" alt="Innovate Stadia Systems Poland">
-      </a>
-      <div class="navlinks">
-        <a href="index.html" class="active">Strona główna</a>
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img class="logo-mark" src="assets/logo.png" alt="Innovate Stadia Systems Poland">
+    </a>
+    <button class="navtoggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="navlinks">
+      <a href="index.html" class="active">Strona główna</a>
+      <a href="o-firmie.html">O firmie</a>
+      <a href="inzynieria.html">Inżynieria</a>
+      <a href="projekty.html">Projekty</a>
+      <a href="partnerzy.html">Partnerzy</a>
+      <a href="kontakt.html" class="cta">Wyślij zapytanie</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" style="background-image:url('assets/aerial.jpg');"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-grain"></div>
+  <svg class="hero-arc" viewBox="0 0 1400 500" fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#1fc8da"/><stop offset="0.5" stop-color="#e5187c"/><stop offset="1" stop-color="#f4801e"/>
+      </linearGradient>
+    </defs>
+    <path d="M40,460 Q700,-40 1360,460" stroke="url(#g1)" stroke-width="1.5" opacity="0.5"/>
+    <path d="M130,460 Q700,50 1270,460" stroke="url(#g1)" stroke-width="1.5" opacity="0.35"/>
+    <path d="M220,460 Q700,140 1180,460" stroke="url(#g1)" stroke-width="1.5" opacity="0.22"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Wyłączny przedstawiciel Innovate Stadia Ltd. w Polsce</span>
+      <h1>Architektura,<br>która wyprzedza czas.</h1>
+      <p class="hero-sub">Łączymy brytyjską technologię modułową z polskim wykonawstwem, aby dostarczać trybuny i areny klasy UEFA/FIFA szybciej, lżej i z mniejszym śladem węglowym.</p>
+      <div class="btn-row">
+        <a href="kontakt.html" class="btn btn-primary">Rozpocznij projekt</a>
+        <a href="projekty.html" class="btn btn-ghost">Zobacz projekty</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">−50%</div><div class="lbl">Czas realizacji</div></div>
+      <div class="stat"><div class="num">−40%</div><div class="lbl">Ślad węglowy</div></div>
+      <div class="stat"><div class="num">−70%</div><div class="lbl">Masa vs. beton</div></div>
+      <div class="stat"><div class="num">UEFA/FIFA</div><div class="lbl">Standard wykonania</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="synergy">
+  <div class="wrap two-col reveal">
+    <div class="imgwrap">
+      <img src="assets/z2.jpg" alt="Stadion w dniu meczowym — pełne trybuny">
+    </div>
+    <div>
+      <span class="eyebrow">Globalna technologia. Lokalne wykonanie.</span>
+      <h2 style="margin-top:16px;">Most technologiczny między Wielką Brytanią a Europą Środkową.</h2>
+      <div class="quote-block">
+        <p>Innovate Stadia Systems Poland to coś więcej niż oddział korporacyjny — to dynamiczny podmiot łączący brytyjskie know-how techniczne z dogłębną znajomością środkowoeuropejskiego rynku.</p>
+        <cite>Z materiału „Synergy Transforming European Arenas”, 2026</cite>
+      </div>
+      <p class="bodytext">Za tym partnerstwem stoją Dyrektorzy <strong>Gregory Borowiec</strong> i <strong>Maciej Gabor</strong>, którzy dostrzegli lukę między dostępnością przełomowych globalnych technologii a ich praktycznym wdrożeniem na lokalnych rynkach — i zbudowali spółkę, która tę lukę wypełnia.</p>
+      <a href="o-firmie.html" class="btn btn-ghost" style="margin-top:28px;">Poznaj historię firmy</a>
+    </div>
+  </div>
+</section>
+
+<section id="obszary">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Co robimy</span>
+      <h2>Trzy filary każdego projektu.</h2>
+      <p>Od pierwszego szkicu konstrukcyjnego po ostatni panel elewacji — nadzorujemy cały proces dostarczania nowoczesnej infrastruktury sportowej.</p>
+    </div>
+    <div class="grid3 reveal-stagger">
+      <div class="card r-item">
+        <span class="idx">01 / Inżynieria</span>
+        <h3>Kompozyty strukturalne</h3>
+        <p>Systemy zastępujące tradycyjny beton — lżejsze, odporne na korozję i szybsze w montażu.</p>
+        <a href="inzynieria.html" class="more">Zobacz technologię →</a>
+      </div>
+      <div class="card r-item">
+        <span class="idx">02 / Realizacje</span>
+        <h3>Proponowane projekty</h3>
+        <p>Wybrane koncepcje i propozycje projektowe przygotowane w oparciu o BIM i prefabrykację.</p>
+        <a href="projekty.html" class="more">Przeglądaj projekty →</a>
+      </div>
+      <div class="card r-item">
+        <span class="idx">03 / Sieć</span>
+        <h3>Partnerzy globalni</h3>
+        <p>Innovate Stadia, Tilea Systems, AWL i GB Consultancy Group — wspólne doświadczenie na rynkach międzynarodowych.</p>
+        <a href="partnerzy.html" class="more">Poznaj partnerów →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap reveal" style="text-align:left; max-width:720px;">
+    <span class="eyebrow">Porozmawiajmy o Twoim projekcie</span>
+    <h2 style="margin-top:16px;">Zapraszamy inwestorów, architektów i przedstawicieli samorządów.</h2>
+    <p class="bodytext" style="margin-top:18px;">Nasz zespół w Warszawie odpowiada na zapytania dotyczące budowy, modernizacji i finansowania obiektów sportowych na terenie całej Polski.</p>
+    <div class="btn-row" style="margin-top:32px;">
+      <a href="kontakt.html" class="btn btn-primary">Wyślij zapytanie biznesowe</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="index.html" class="brand">
+          <img class="logo-mark" src="assets/logo.png" alt="Innovate Stadia Systems Poland">
+        </a>
+        <p>Wyłączny przedstawiciel Innovate Stadia Ltd. w Polsce. Realizacje High-End na rynkach światowych.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Nawigacja</h4>
         <a href="o-firmie.html">O firmie</a>
         <a href="inzynieria.html">Inżynieria</a>
         <a href="projekty.html">Projekty</a>
         <a href="partnerzy.html">Partnerzy</a>
-        <a href="kontakt.html" class="cta">Wyślij zapytanie</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <p>Aleja Jana Pawła II 27<br>00-867 Warszawa</p>
+        <a href="kontakt.html">Wyślij zapytanie →</a>
+      </div>
+      <div class="foot-col">
+        <h4>Grupa</h4>
+        <a href="https://innovatestadia.com" target="_blank" rel="noopener">Innovate Stadia (UK) ↗</a>
+        <a href="https://awl.ie/" target="_blank" rel="noopener">AWL ↗</a>
+        <a href="https://tilea.systems" target="_blank" rel="noopener">Tilea Systems ↗</a>
       </div>
     </div>
-  </nav>
-
-  <main class="hero">
-    <p class="hero-sub">Wyłączny przedstawiciel Innovate Stadia Ltd. w Polsce</p>
-    <h1>Architektura, która wyprzedza czas.</h1>
-    <p class="hero-desc">Łączymy brytyjską technologię modułową z polskim wykonawstwem, aby dostarczać trybuny i areny klasy UEFA/FIFA szybciej, lżej i z mniejszym śladem węglowym.</p>
-    
-    <div class="hero-btns">
-      <a href="kontakt.html" class="btn-primary">Rozpocznij projekt</a>
-      <a href="projekty.html" class="btn-secondary">Zobacz projekty</a>
+    <div class="foot-bottom">
+      <span>© 2026 Innovate Stadia Systems Poland Sp. z o.o.</span>
+      <span>Oficjalny partner Innovate Stadia Ltd. (UK)</span>
     </div>
+  </div>
+</footer>
 
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-num c1">-50%</div>
-        <div class="stat-label">Czas realizacji</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num c2">-40%</div>
-        <div class="stat-label">Ślad węglowy</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num c1">-70%</div>
-        <div class="stat-label">Masa vs. beton</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num c3">UEFA/FIFA</div>
-        <div class="stat-label">Standard wykonania</div>
-      </div>
-    </div>
-  </main>
-
+<script src="assets/main.js"></script>
 </body>
 </html>
