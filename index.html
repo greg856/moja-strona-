@@ -1,1 +1,176 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Innovate Stadia Systems Poland — Architektura i Inżynieria Stadionowa</title>
+<meta name="description" content="Wyłączny przedstawiciel Innovate Stadia Ltd. w Polsce. Modułowe systemy stadionowe, kompozyty strukturalne i wykonawstwo klasy UEFA/FIFA.">
+<style>
+/* ============================================================
+   INNOVATE STADIA SYSTEMS POLAND — design system
+   Palette pulled from the brand mark: cyan / magenta / orange arc
+   ============================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg: #0a0c10;
+  --bg-panel: #10131a;
+  --bg-card: #151922;
+  --line: #262b35;
+  --line-soft: #1b2029;
+  --text: #f2f4f6;
+  --text-muted: #8b93a3;
+  --text-dim: #565e6c;
+  --cyan: #1fc8da;
+  --magenta: #e5187c;
+  --orange: #f4801e;
+  --arc: linear-gradient(90deg, var(--cyan), var(--magenta), var(--orange));
+  --radius: 2px;
+  --maxw: 1180px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,h4{
+  font-family:'Space Grotesk', sans-serif;
+  font-weight:600;
+  line-height:1.08;
+  margin:0;
+  letter-spacing:-0.01em;
+}
+p{ margin:0; }
+.wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; }
+}
+
+/* ---------- eyebrow / mono labels ---------- */
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12.5px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow::before{
+  content:"";
+  width:16px; height:2px;
+  background:var(--arc);
+  display:inline-block;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  border-bottom:1px solid transparent;
+  background:linear-gradient(to bottom, rgba(10,12,16,0.92), rgba(10,12,16,0));
+  transition:background .3s ease, border-color .3s ease;
+}
+.nav.solid{
+  background:rgba(10,12,16,0.96);
+  border-bottom-color:var(--line);
+  backdrop-filter:blur(8px);
+}
+.nav .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  height:92px;
+}
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand .logo-mark{ height:60px; width:auto; }
+@media (max-width:860px){ .brand .logo-mark{ height:50px; } }
+
+.navlinks{ display:flex; align-items:center; gap:2px; }
+.navlinks a{
+  font-size:14px; font-weight:500; color:var(--text-muted);
+  padding:10px 16px; border-radius:var(--radius);
+  transition:color .2s ease;
+  position:relative;
+}
+.navlinks a:hover{ color:var(--text); }
+.navlinks a.active{ color:var(--text); }
+.navlinks a.active::after{
+  content:""; position:absolute; left:16px; right:16px; bottom:5px; height:2px;
+  background:var(--arc);
+}
+.navlinks .cta{
+  margin-left:8px;
+  color:var(--bg) !important;
+  background:var(--text);
+  font-weight:600;
+  padding:10px 20px;
+}
+.navlinks .cta:hover{ background:var(--cyan); }
+
+.navtoggle{ display:none; background:none; border:0; color:var(--text); cursor:pointer; padding:8px; }
+.navtoggle svg{ width:22px; height:22px; }
+
+@media (max-width:860px){
+  .navlinks{
+    position:fixed; top:92px; left:0; right:0; bottom:0;
+    flex-direction:column; align-items:stretch; gap:0;
+    background:var(--bg); padding:16px 24px;
+    border-top:1px solid var(--line);
+    transform:translateY(-8px); opacity:0; pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  .navlinks.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+  .navlinks a{ padding:16px 4px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+  .navlinks .cta{ margin:16px 0 0; text-align:center; }
+  .navtoggle{ display:block; }
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px; letter-spacing:0.06em; text-transform:uppercase;
+  padding:15px 26px; border-radius:var(--radius);
+  border:1px solid var(--line);
+  transition:border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.btn-primary{ background:var(--text); color:var(--bg); border-color:var(--text); font-weight:600; }
+.btn-primary:hover{ background:var(--cyan); border-color:var(--cyan); transform:translateY(-1px); }
+.btn-ghost{ color:var(--text); }
+.btn-ghost:hover{ border-color:var(--text-muted); }
+.btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+
+/* ---------- hero (stadium arc signature) ---------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex; align-items:flex-end;
+  padding:150px 0 90px;
+  overflow:hidden;
+  background:#050608;
+}
+.hero-bg{
+  position:absolute; inset:0;
+  background-size:cover; background-position:center 60%;
+  filter:saturate(0.92);
+}
+.hero-scrim{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top, rgba(5,6,8,0.98) 12%, rgba(5,6,8,0.72) 55%, rgba(5,6,8,0.5) 100%),
+    linear-gradient(to right, rgba(5,6,8,0.8) 0%, rgba(5,6,8,0.25) 55%);
+}
+.hero-arc{
+  position:absolute; left:50%; top:38%; width:1400px; max-width:none;
+  transform:translate(-50%,-50%);
+  opacity:0.55; pointer-events:none;
