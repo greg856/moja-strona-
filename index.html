@@ -108,31 +108,34 @@
   
 </section>
 <!-- Sekcja Kontaktowa Innovate Stadia Systems Poland -->
-<section id="cta"></section>
-  <div class="wrap reveal" style="text-align:left; max-width:720px;">
-    <span class="eyebrow">Porozmawiajmy o Twoim projekcie</span>
-    <h2 style="margin-top:16px;">Zapraszamy inwestorów, architektów i przedstawicieli samorządów.</h2>
-    <p class="bodytext" style="margin-top:18px;">Nasz zespół w Warszawie odpowiada na zapytania dotyczące technologii.</p>
+<!-- Sekcja Kontaktowa Innovate Stadia Systems Poland -->
+<section id="cta" class="contact-section" style="padding: 60px 0; background: #0a0a0c;">
+  <div class="wrap reveal" style="text-align: left; max-width: 720px; margin: 0 auto; padding: 0 20px;">
+    
+    <span class="eyebrow" style="color: #00bcd4; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Porozmawiajmy o Twoim projekcie</span>
+    <h2 style="margin-top: 16px; color: #ffffff; font-size: 28px; line-height: 1.3;">Zapraszamy inwestorów, architektów i przedstawicieli samorządów.</h2>
+    <p class="bodytext" style="margin-top: 18px; color: #aaa; font-size: 16px; line-height: 1.6;">Nasz zespół w Warszawie odpowiada na zapytania dotyczące technologii SPS.</p>
 
-    <!-- Formularz ze zweryfikowanym id Formspree -->
-    <form action="https://formspree.io/f/mzebqjyj" method="POST" style="margin-top:24px;">
+    <!-- Pojedynczy, czysty formularz ze zweryfikowanym id Formspree -->
+    <form action="https://formspree.io/f/mzebqjyj" method="POST" style="margin-top: 32px;" autocomplete="off">
       
-      <div style="margin-bottom:16px;">
-        <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">IMIĘ I NAZWISKO / FIRMA</label>
-        <input type="text" name="name" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;">
+      <div style="margin-bottom: 20px;">
+        <label for="cta-name" style="display: block; font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px;">IMIĘ I NAZWISKO / FIRMA</label>
+        <input type="text" id="cta-name" name="name" required autocomplete="off" style="width: 100%; padding: 14px; background: #111; border: 1px solid #333; color: #fff; font-size: 15px; box-sizing: border-box;">
       </div>
 
-      <div style="margin-bottom:16px;">
-        <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">ADRES E-MAIL</label>
-        <input type="email" name="email" placeholder="greg@innovatestadia-systems-pl.com" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;">
+      <div style="margin-bottom: 20px;">
+        <label for="cta-email" style="display: block; font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px;">ADRES E-MAIL</label>
+        <input type="email" id="cta-email" name="email" required placeholder="" autocomplete="new-password" style="width: 100%; padding: 14px; background: #111; border: 1px solid #333; color: #fff; font-size: 15px; box-sizing: border-box;">
       </div>
 
-      <div style="margin-bottom:20px;">
-        <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">TREŚĆ ZAPYTANIA</label>
-        <textarea name="message" rows="5" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;"></textarea>
+      <div style="margin-bottom: 24px;">
+        <label for="cta-message" style="display: block; font-size: 12px; color: #888; margin-bottom: 8px; letter-spacing: 1px;">TREŚĆ ZAPYTANIA</label>
+        <textarea id="cta-message" name="message" rows="5" required placeholder="Opisz w kilku zdaniach zakres projektu..." autocomplete="off" style="width: 100%; padding: 14px; background: #111; border: 1px solid #333; color: #fff; font-size: 15px; box-sizing: border-box; resize: vertical;"></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary" style="padding:14px 28px; background:#00bcd4; color:#000; font-weight:bold; border:none; cursor:pointer;">
+      <!-- Tylko JEDEN przycisk wysyłający -->
+      <button type="submit" class="btn btn-primary" style="padding: 16px 36px; background: #00bcd4; color: #000; font-weight: bold; border: none; font-size: 14px; letter-spacing: 1px; cursor: pointer; display: inline-block;">
         WYŚLIJ ZAPYTANIE
       </button>
 
@@ -140,8 +143,11 @@
   </div>
 </section>
 
-
-  
+        WYŚLIJ ZAPYTANIE
+      </button>
+    </form>
+  </div>
+      </section>  
       <div style="margin-bottom:16px;">
         <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">NAZWISKO / FIRMA</label>
         <input type="text" name="name" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;">
