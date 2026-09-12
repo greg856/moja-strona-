@@ -43,26 +43,30 @@
       <div class="contact-panel">
         <span class="eyebrow">Wyślij zapytanie</span>
         <form style="margin-top:28px;" onsubmit="event.preventDefault(); this.querySelector('.form-note').style.display='block';">
-          <div class="field">
-            <label for="name">Imię i nazwisko</label>
-            <input id="name" type="text" name="name" required>
-          </div>
-          <div class="field">
-            <label for="org">Firma / instytucja</label>
-            <input id="org" type="text" name="org">
-          </div>
-          <div class="field">
-            <label for="email">Adres e-mail</label>
-            <input id="email" type="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="msg">Wiadomość</label>
-            <textarea id="msg" name="msg" required placeholder="Opisz w kilku zdaniach zakres projektu..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Wyślij zapytanie</button>
-          <p class="form-note" style="display:none; margin-top:16px; color:var(--cyan); font-size:14px;">Dziękujemy — formularz to szablon prototypowy; podłącz go do swojego adresu e-mail lub CRM przed publikacją.</p>
-        </form>
+            <!-- Formularz ze zintegrowanym identyfikatorem Formspree -->
+    <form action="https://formspree.io/f/mzebqjyj" method="POST" style="margin-top:24px;">
+      
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">IMIĘ I NAZWISKO / FIRMA</label>
+        <input type="text" name="name" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;">
       </div>
+
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">ADRES E-MAIL</label>
+        <input type="email" name="email" placeholder="greg@innovatestadia-systems-pl.com" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;">
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="display:block; font-size:12px; color:#888; margin-bottom:6px;">TREŚĆ ZAPYTANIA</label>
+        <textarea name="message" rows="5" required style="width:100%; padding:12px; background:#111; border:1px solid #333; color:#fff;"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="padding:14px 28px; background:#00bcd4; color:#000; font-weight:bold; border:none; cursor:pointer;">
+        WYŚLIJ ZAPYTANIE
+      </button>
+
+    </form>
+
       <div class="contact-panel contact-info">
         <span class="eyebrow">Dane firmy</span>
         <dl style="margin-top:6px;">
